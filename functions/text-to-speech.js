@@ -1,6 +1,6 @@
-import { Input } from "telegraf";
+const { Input } = require('telegraf');
 
-export const text_to_speech = async (data, ctx) => {
+const text_to_speech = async (data, ctx) => {
   let clean_data = ''
 
     const cleanup = async (data) => {
@@ -18,3 +18,5 @@ export const text_to_speech = async (data, ctx) => {
 
   cleanup(clean_data);
 };
+
+module.exports = { text_to_speech };

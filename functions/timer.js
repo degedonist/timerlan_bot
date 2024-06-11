@@ -1,4 +1,4 @@
-export const setTimer = (time, bot, chatId) => {
+const setTimer = (time, bot, chatId) => {
 
     const message = () => {
         bot.telegram.sendMessage(chatId, 'Время вышло!');
@@ -6,3 +6,5 @@ export const setTimer = (time, bot, chatId) => {
 
     setTimeout(message, time * 1000);
 };
+
+module.exports = { setTimer };
